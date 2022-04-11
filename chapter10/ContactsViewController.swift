@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import CoreData
 
-class ContactsViewController: UIViewController {
-
+class ContactsViewController: UIViewController, UITextFieldDelegate, DateControllerDelegate {
+    
+    var currentContact: Contact?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPhone: UITextField!
@@ -25,10 +28,36 @@ class ContactsViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         // Do any additional setup after loading the view.
         self.changeEditMode(self)
+        let textFields: [UITextField] = [txtName, txtAddress, txtCity, txtState, txtZip,
+                                                 txtPhone, txtCell, txtEmail]
+        //add a listener
+        for textfield in textFields {
+                    textfield.addTarget(self,
+                                        action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)),
+                                        for: UIControl.Event.editingDidEnd)
+                }
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+            if currentContact == nil {
+                let context = appDelegate.persistentContainer.viewContext
+                currentContact = Contact(context: context)
+            }
+            currentContact?.contactName = txtName.text
+            currentContact?.streetAddress = txtAddress.text
+            currentContact?.city = txtCity.text
+            currentContact?.state = txtState.text
+            currentContact?.zipCode = txtZip.text
+            currentContact?.cellNumber = txtCell.text
+            currentContact?.phoneNumber = txtPhone.text
+            currentContact?.email = txtEmail.text
+            return true
+    }
+    @objc func saveContact() {
+        appDelegate.saveContext()
+        sgmtEditMode.selectedSegmentIndex = 0
+        changeEditMode(self)
     }
     override func didReceiveMemoryWarning() {
         
@@ -45,14 +74,14 @@ class ContactsViewController: UIViewController {
                 
             }
             btnChange.isHidden = true
-        }
+            navigationItem.rightBarButtonItem = nil        }
         else if sgmtEditMode.selectedSegmentIndex == 1 {
             for textField in textFields {
                 textField.isEnabled = true
                 textField.borderStyle = UITextField.BorderStyle.roundedRect
             }
             btnChange.isHidden = false
-        }
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem:.save,target: self, action: #selector(self.saveContact))        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,7 +89,18 @@ class ContactsViewController: UIViewController {
             //register that the keyboard has beed ndisplayed
             self.registerKeyboardNotifications()
     }
-        
+    func dateChanged(date: Date) {
+           if currentContact == nil {
+               let context = appDelegate.persistentContainer.viewContext
+               currentContact = Contact(context: context)
+           }
+           currentContact?.birthday = date
+           let formatter = DateFormatter()
+           formatter.dateStyle = .short
+           lblBirthdate.text = formatter.string(from: date)
+       }
+       
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         //a method to stop the keyboard from liststending for notification
@@ -108,9 +148,11 @@ class ContactsViewController: UIViewController {
             self.scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
         }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
+            if(segue.identifier == "segueContactDate"){
+                let dateController = segue.destination as! DateViewController
+                dateController.delegate = self
+            }
     
 
+}
 }

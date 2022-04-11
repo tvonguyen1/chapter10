@@ -10,6 +10,9 @@
 		7127018927FB2A2F00F8AE6A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127018827FB2A2F00F8AE6A /* ContactsViewController.swift */; };
 		7127018B27FB2A5D00F8AE6A /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127018A27FB2A5D00F8AE6A /* MapsViewController.swift */; };
 		7127018D27FB2A7500F8AE6A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127018C27FB2A7500F8AE6A /* SettingViewController.swift */; };
+		71484B942803E8FF001A7100 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71484B932803E8FF001A7100 /* Constants.swift */; };
+		71484B972803ED87001A7100 /* MyContactListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71484B952803ED87001A7100 /* MyContactListModel.xcdatamodeld */; };
+		71869A842804665B00A6E92B /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71869A832804665B00A6E92B /* DateViewController.swift */; };
 		71EA6A7127FAA08600E0B5DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA6A7027FAA08600E0B5DC /* AppDelegate.swift */; };
 		71EA6A7327FAA08600E0B5DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA6A7227FAA08600E0B5DC /* SceneDelegate.swift */; };
 		71EA6A7527FAA08600E0B5DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA6A7427FAA08600E0B5DC /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 		7127018827FB2A2F00F8AE6A /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		7127018A27FB2A5D00F8AE6A /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		7127018C27FB2A7500F8AE6A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		71484B932803E8FF001A7100 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		71484B962803ED87001A7100 /* MyContactListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyContactListModel.xcdatamodel; sourceTree = "<group>"; };
+		71869A832804665B00A6E92B /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		71EA6A6D27FAA08600E0B5DC /* chapter10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chapter10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71EA6A7027FAA08600E0B5DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71EA6A7227FAA08600E0B5DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +69,12 @@
 			isa = PBXGroup;
 			children = (
 				71EA6A7027FAA08600E0B5DC /* AppDelegate.swift */,
+				71484B952803ED87001A7100 /* MyContactListModel.xcdatamodeld */,
+				71484B932803E8FF001A7100 /* Constants.swift */,
 				71EA6A7227FAA08600E0B5DC /* SceneDelegate.swift */,
 				71EA6A7427FAA08600E0B5DC /* ViewController.swift */,
 				7127018827FB2A2F00F8AE6A /* ContactsViewController.swift */,
+				71869A832804665B00A6E92B /* DateViewController.swift */,
 				7127018A27FB2A5D00F8AE6A /* MapsViewController.swift */,
 				7127018C27FB2A7500F8AE6A /* SettingViewController.swift */,
 				71EA6A7627FAA08600E0B5DC /* Main.storyboard */,
@@ -151,7 +160,10 @@
 				71EA6A7527FAA08600E0B5DC /* ViewController.swift in Sources */,
 				7127018927FB2A2F00F8AE6A /* ContactsViewController.swift in Sources */,
 				71EA6A7127FAA08600E0B5DC /* AppDelegate.swift in Sources */,
+				71484B942803E8FF001A7100 /* Constants.swift in Sources */,
 				71EA6A7327FAA08600E0B5DC /* SceneDelegate.swift in Sources */,
+				71484B972803ED87001A7100 /* MyContactListModel.xcdatamodeld in Sources */,
+				71869A842804665B00A6E92B /* DateViewController.swift in Sources */,
 				7127018D27FB2A7500F8AE6A /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +382,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		71484B952803ED87001A7100 /* MyContactListModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				71484B962803ED87001A7100 /* MyContactListModel.xcdatamodel */,
+			);
+			currentVersion = 71484B962803ED87001A7100 /* MyContactListModel.xcdatamodel */;
+			path = MyContactListModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 71EA6A6527FAA08600E0B5DC /* Project object */;
 }
