@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D311B08280DD9A3004D484F /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D311B07280DD9A3004D484F /* ContactsTableViewController.swift */; };
 		7127018927FB2A2F00F8AE6A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127018827FB2A2F00F8AE6A /* ContactsViewController.swift */; };
 		7127018B27FB2A5D00F8AE6A /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127018A27FB2A5D00F8AE6A /* MapsViewController.swift */; };
 		7127018D27FB2A7500F8AE6A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127018C27FB2A7500F8AE6A /* SettingViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D311B07280DD9A3004D484F /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		7127018827FB2A2F00F8AE6A /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		7127018A27FB2A5D00F8AE6A /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		7127018C27FB2A7500F8AE6A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				7127018A27FB2A5D00F8AE6A /* MapsViewController.swift */,
 				7127018C27FB2A7500F8AE6A /* SettingViewController.swift */,
 				71EA6A7627FAA08600E0B5DC /* Main.storyboard */,
+				2D311B07280DD9A3004D484F /* ContactsTableViewController.swift */,
 				71EA6A7927FAA08800E0B5DC /* Assets.xcassets */,
 				71EA6A7B27FAA08800E0B5DC /* LaunchScreen.storyboard */,
 				71EA6A7E27FAA08800E0B5DC /* Info.plist */,
@@ -158,6 +161,7 @@
 			files = (
 				7127018B27FB2A5D00F8AE6A /* MapsViewController.swift in Sources */,
 				71EA6A7527FAA08600E0B5DC /* ViewController.swift in Sources */,
+				2D311B08280DD9A3004D484F /* ContactsTableViewController.swift in Sources */,
 				7127018927FB2A2F00F8AE6A /* ContactsViewController.swift in Sources */,
 				71EA6A7127FAA08600E0B5DC /* AppDelegate.swift in Sources */,
 				71484B942803E8FF001A7100 /* Constants.swift in Sources */,

@@ -7,9 +7,11 @@
 
 import UIKit
 
+//protocol
 protocol DateControllerDelegate: class {
     func dateChanged(date: Date)
 }
+//delegator
 class DateViewController: UIViewController {
     @IBOutlet weak var dtpDate: UIDatePicker!
     weak var delegate: DateControllerDelegate?
