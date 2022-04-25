@@ -20,6 +20,8 @@
 		71EA6A7827FAA08600E0B5DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71EA6A7627FAA08600E0B5DC /* Main.storyboard */; };
 		71EA6A7A27FAA08800E0B5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71EA6A7927FAA08800E0B5DC /* Assets.xcassets */; };
 		71EA6A7D27FAA08800E0B5DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71EA6A7B27FAA08800E0B5DC /* LaunchScreen.storyboard */; };
+		71FE9FB828165C5D00716C06 /* LocationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE9FB728165C5D00716C06 /* LocationDemoViewController.swift */; };
+		71FE9FBA2816676700716C06 /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FE9FB92816676700716C06 /* MapPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		71EA6A7927FAA08800E0B5DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71EA6A7C27FAA08800E0B5DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71EA6A7E27FAA08800E0B5DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71FE9FB728165C5D00716C06 /* LocationDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDemoViewController.swift; sourceTree = "<group>"; };
+		71FE9FB92816676700716C06 /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +82,10 @@
 				7127018827FB2A2F00F8AE6A /* ContactsViewController.swift */,
 				71869A832804665B00A6E92B /* DateViewController.swift */,
 				7127018A27FB2A5D00F8AE6A /* MapsViewController.swift */,
+				71FE9FB92816676700716C06 /* MapPoint.swift */,
 				7127018C27FB2A7500F8AE6A /* SettingViewController.swift */,
 				71EA6A7627FAA08600E0B5DC /* Main.storyboard */,
+				71FE9FB728165C5D00716C06 /* LocationDemoViewController.swift */,
 				2D311B07280DD9A3004D484F /* ContactsTableViewController.swift */,
 				71EA6A7927FAA08800E0B5DC /* Assets.xcassets */,
 				71EA6A7B27FAA08800E0B5DC /* LaunchScreen.storyboard */,
@@ -164,11 +170,13 @@
 				2D311B08280DD9A3004D484F /* ContactsTableViewController.swift in Sources */,
 				7127018927FB2A2F00F8AE6A /* ContactsViewController.swift in Sources */,
 				71EA6A7127FAA08600E0B5DC /* AppDelegate.swift in Sources */,
+				71FE9FBA2816676700716C06 /* MapPoint.swift in Sources */,
 				71484B942803E8FF001A7100 /* Constants.swift in Sources */,
 				71EA6A7327FAA08600E0B5DC /* SceneDelegate.swift in Sources */,
 				71484B972803ED87001A7100 /* MyContactListModel.xcdatamodeld in Sources */,
 				71869A842804665B00A6E92B /* DateViewController.swift in Sources */,
 				7127018D27FB2A7500F8AE6A /* SettingViewController.swift in Sources */,
+				71FE9FB828165C5D00716C06 /* LocationDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
