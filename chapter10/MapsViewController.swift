@@ -42,9 +42,11 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     
 
     @IBAction func findUser(_ sender: Any) {
+        //mapView.showsUserLocation = true
         mapView.showAnnotations(mapView.annotations, animated: true)
     }
     override func viewWillAppear(_ animated: Bool) {
+        //mapView.setUserTrackingMode(.follow, animated: true)
             //Get contacts from Core Data
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
@@ -91,11 +93,11 @@ class MapsViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         }
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
             var span = MKCoordinateSpan()
-            span.latitudeDelta = 0.05
-            span.longitudeDelta = 0.05
+            span.latitudeDelta = 0.2
+            span.longitudeDelta = 0.2
             let viewRegion = MKCoordinateRegion(center: userLocation.coordinate, span: span)
             mapView.setRegion(viewRegion, animated: true)
-        let mp = MapPoint(latitude: userLocation.coordinate.latitude,
+            let mp = MapPoint(latitude: userLocation.coordinate.latitude,
                                   longitude: userLocation.coordinate.longitude)
                 mp.title = "You"
                 mp.subtitle = "Are here"

@@ -22,6 +22,7 @@ class LocationDemoViewController: UIViewController,  CLLocationManagerDelegate {
     @IBOutlet weak var txtStreet: UITextField!
     @IBOutlet weak var lblHeading: UILabel!
     
+    //"lazy" indicates that while the line indicates that the CLGeoCoder object should be created immediately, instantiation will be deferred until the object is actually needed. This is called "lazy instantiation" and allows the system to conserve resources.
     lazy var geoCoder = CLGeocoder()
     var locationManager: CLLocationManager!
 
